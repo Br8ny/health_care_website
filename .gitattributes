@@ -1,0 +1,9 @@
+# Normalize line endings: blobs are always LF, regardless of the contributor's OS.
+* text=auto eol=lf
+
+# Binary assets — never normalize or diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
