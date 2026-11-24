@@ -23,7 +23,9 @@ const Dashboard = () => {
       return p;
     });
     setPatients(updated);
-    savePatients(updated);
+    // Persist the source records, not the derived wait-time counters:
+    // those are recomputed on every poll and must never accumulate in storage.
+    savePatients(data);
   };
 
   useEffect(() => {
